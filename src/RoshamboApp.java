@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class RoshamboApp {
+	//takes in two opponent Roshambos
+	//returns 'w' / 'l' / 'd' for win / lose / draw 
 	public static char checkResult(Roshambo opponent, Roshambo human) {
-		System.out.println("Opponent:" + opponent);
+		System.out.println("Opponent: " + opponent);
 		System.out.println("You: " + human);
 		char wld = 'w';
 		if (human == Roshambo.PAPER) {
@@ -40,9 +42,8 @@ public class RoshamboApp {
 		}
 		return wld;
 	}
+	
 	public static void main(String[] args) {
-		Roshambo opponentThrow;
-		Roshambo userThrow;
 		Scanner scan = new Scanner(System.in);
 		
 		Player p1 = new Player();
@@ -79,6 +80,7 @@ public class RoshamboApp {
 			keepGoing = scan.next().charAt(0);
 		}
 		System.out.println("Thanks for playing!");
+		scan.close();
 	}
 
 }
